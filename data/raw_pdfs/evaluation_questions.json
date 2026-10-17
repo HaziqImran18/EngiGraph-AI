@@ -1,0 +1,72 @@
+[
+  {
+    "question": "What is the recommended grease for standard service conditions in Baldor G-Series AC motors?",
+    "expected_answer": "Polyrex EM (Exxon Mobil).",
+    "source_document": "BaldorABB MN409, Large AC Motors Installation & Operating Manual.pdf",
+    "source_page": 13,
+    "answerable": true
+  },
+  {
+    "question": "What are the maximum permissible coupling alignment limits for angular and parallel misalignment?",
+    "expected_answer": "Maximum permissible angular misalignment = .001 inch per inch of coupling hub diameter. Maximum permissible parallel misalignment = .002 inch TIR (Total Indicated Runout).",
+    "source_document": "BaldorABB MN409, Large AC Motors Installation & Operating Manual.pdf",
+    "source_page": 10,
+    "answerable": true
+  },
+  {
+    "question": "What should the bearing temperature not exceed during first-time start-up, and what should be done if it does?",
+    "expected_answer": "Bearing temperature should not exceed 195°F (90°C). If the rate of rise does not decrease or the temperature exceeds 90°C, stop the motor.",
+    "source_document": "BaldorABB MN409, Large AC Motors Installation & Operating Manual.pdf",
+    "source_page": 11,
+    "answerable": true
+  },
+  {
+    "question": "What is the purpose of space heaters in Baldor large AC motors?",
+    "expected_answer": "Space heaters are used to prevent condensation of moisture within the motor enclosure during shutdown or storage periods.",
+    "source_document": "BaldorABB MN409, Large AC Motors Installation & Operating Manual.pdf",
+    "source_page": 21,
+    "answerable": true
+  },
+  {
+    "question": "What is the formula for minimum insulation resistance (RM) for stator windings?",
+    "expected_answer": "RM = KV + 1, where RM is the minimum insulation resistance in mega ohms at 40°C and KV is the rating machine potential in kilovolts.",
+    "source_document": "BaldorABB MN409, Large AC Motors Installation & Operating Manual.pdf",
+    "source_page": 17,
+    "answerable": true
+  },
+  {
+    "question": "What simulation tool was used to model damage propagation in aircraft gas turbine engines for the PHM challenge data?",
+    "expected_answer": "C-MAPSS (Commercial Modular Aero-Propulsion System Simulation).",
+    "source_document": "Damage Propagation Modeling for Aircraft Engine Prognostics (NASA NTRS).pdf",
+    "source_page": 2,
+    "answerable": true
+  },
+  {
+    "question": "What is the health index calculation based on in the damage propagation model, and what is the failure criterion?",
+    "expected_answer": "The health index is defined as the minimum of several superimposed operational margins at any given time instant. The failure criterion is reached when the health index reaches zero.",
+    "source_document": "Damage Propagation Modeling for Aircraft Engine Prognostics (NASA NTRS).pdf",
+    "source_page": 1,
+    "answerable": true
+  },
+  {
+    "question": "What is the exponential wear equation used for health index modeling in the damage propagation paper?",
+    "expected_answer": "h(t) = 1 - d - exp{a t^b}, where d is the initial degradation, and a and b are trajectory parameters.",
+    "source_document": "Damage Propagation Modeling for Aircraft Engine Prognostics (NASA NTRS).pdf",
+    "source_page": 5,
+    "answerable": true
+  },
+  {
+    "question": "What is the recommended oil change interval for sleeve bearing motors under standard conditions?",
+    "expected_answer": "Not found in the provided documents.",
+    "source_document": "",
+    "source_page": 0,
+    "answerable": false
+  },
+  {
+    "question": "What is the maximum operating altitude for the C-MAPSS engine model?",
+    "expected_answer": "Not found in the provided documents.",
+    "source_document": "",
+    "source_page": 0,
+    "answerable": false
+  }
+]

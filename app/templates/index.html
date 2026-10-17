@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EngiGraph | Diagnostic Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header class="titleblock">
+  <div class="tb-brand">
+    <svg class="logo" viewBox="0 0 40 40" aria-hidden="true">
+      <path d="M8 30 L20 10 L32 30 Z M8 30 H32" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="20" cy="10" r="3.5" fill="currentColor"/><circle cx="8" cy="30" r="3.5" fill="currentColor"/><circle cx="32" cy="30" r="3.5" fill="currentColor"/>
+    </svg>
+    <div><h1>ENGIGRAPH</h1><p>Multi-agent diagnostic assistant</p></div>
+  </div>
+  <div class="tb-cell"><span>Doc No.</span><b>EG-DIAG-001</b></div>
+  <div class="tb-cell"><span>Mode</span><b>Decision support only</b></div>
+  <div class="tb-cell leds">
+    <span>System</span>
+    <b><i id="led-llm" class="led"></i>LLM <i id="led-emb" class="led"></i>EMBED <i id="led-idx" class="led"></i><u id="idx-count">INDEX 0</u></b>
+  </div>
+</header>
+
+<main class="layout">
+  <aside class="panel" id="library">
+    <h2><em>01</em> Document library</h2>
+    <label class="dropzone" id="dropzone">
+      <input type="file" id="file-input" accept="application/pdf" multiple hidden>
+      <strong>Drop manuals here</strong>
+      <small>or click to select PDF files</small>
+    </label>
+    <div class="bar" id="upload-bar" hidden><div></div></div>
+    <p class="hint" id="upload-msg"></p>
+    <ul class="doclist" id="doclist"></ul>
+  </aside>
+
+  <section class="work">
+    <div class="panel">
+      <h2><em>02</em> Problem report</h2>
+      <textarea id="query" rows="4" maxlength="1000" placeholder="Describe the equipment problem, e.g. &quot;Motor shows excessive vibration and elevated bearing temperature after startup.&quot;"></textarea>
+      <div class="chips" id="examples"></div>
+      <div class="row">
+        <span class="hint" id="count">0 / 1000</span>
+        <button id="run" class="btn">Run diagnosis</button>
+      </div>
+      <p class="error" id="run-error" hidden></p>
+    </div>
+
+    <div class="panel">
+      <h2><em>03</em> Workflow</h2>
+      <div class="pipeline" id="pipeline"></div>
+    </div>
+
+    <div id="result" hidden></div>
+  </section>
+</main>
+
+<footer>
+  <span class="hazard"></span>
+  EngiGraph never controls equipment. Verify every suggestion against the original manual before acting.
+</footer>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

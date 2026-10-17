@@ -1,0 +1,31 @@
+# ---- Core framework ----
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-text-splitters>=0.3.0
+langgraph>=0.2.0
+
+# ---- LLM (Groq) + Embeddings (Google) ----
+langchain-groq>=0.2.0
+langchain-google-genai>=2.0.0
+
+# ---- Vector DB ----
+chromadb>=0.5.0
+langchain-chroma>=0.1.4
+
+# ---- PDF processing ----
+pymupdf>=1.24.0
+
+# ---- Validation / config ----
+pydantic>=2.7.0
+python-dotenv>=1.0.0
+
+# ---- UI (Flask web app) ----
+flask>=3.0.0
+
+# ---- Evaluation / testing ----
+pandas>=2.2.0
+pytest>=8.0.0
+
+# ---- Optional later: FastAPI backend ----
+# fastapi>=0.110.0
+# uvicorn>=0.29.0
