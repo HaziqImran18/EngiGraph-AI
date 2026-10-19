@@ -21,6 +21,7 @@ python-dotenv>=1.0.0
 
 # ---- UI (Flask web app) ----
 flask>=3.0.0
+gunicorn
 
 # ---- Evaluation / testing ----
 pandas>=2.2.0
